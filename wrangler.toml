@@ -1,0 +1,17 @@
+name = "sari"
+compatibility_date = "2024-07-25"
+compatibility_flags = ["nodejs_compat"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "sari-db"
+database_id = "0b39baba-690a-4907-ba2d-801dbdb98c76"
+
+[[r2_buckets]]
+binding = "R2"
+bucket_name = "sari-images"
+
+[vars]
+NEXT_PUBLIC_SITE_URL = "https://sari.pages.dev"
+JWT_SECRET = "replace-with-secure-secret"
+WHATSAPP_NUMBER = "919999999999"
