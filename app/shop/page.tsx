@@ -1,5 +1,5 @@
 'use client';
-import { useState, useMemo } from 'react';
+import { Suspense, useState, useMemo } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import ProductCard from '@/components/ProductCard';
@@ -13,7 +13,7 @@ const SORT_OPTIONS = [
   { label: 'PRICE — HIGH TO LOW', value: 'price-desc' },
 ];
 
-export default function ShopPage() {
+function ShopContent() {
   const params = useSearchParams();
   const [category, setCategory] = useState(params.get('category') || '');
   const [sort, setSort] = useState('featured');
@@ -82,38 +82,27 @@ export default function ShopPage() {
   return (
     <>
       <div className="pt-20 min-h-screen">
-        {/* Header */}
         <div className="px-6 lg:px-12 py-16 max-w-screen-xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <p className="label text-gold text-[10px] mb-4">
               {category ? CATEGORIES.find((c) => c.slug === category)?.name.toUpperCase() : 'ALL SAREES'}
             </p>
             <h1 className="editorial-heading text-espresso text-5xl lg:text-6xl">
-              {category
-                ? CATEGORIES.find((c) => c.slug === category)?.name
-                : 'Shop All'}
+              {category ? CATEGORIES.find((c) => c.slug === category)?.name : 'Shop All'}
             </h1>
           </motion.div>
         </div>
 
         <div className="px-6 lg:px-12 max-w-screen-xl mx-auto pb-24">
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
-            {/* Sidebar (desktop) */}
             <aside className="hidden lg:block w-52 flex-shrink-0">
               <FilterPanel />
             </aside>
 
-            {/* Products */}
             <div className="flex-1">
-              {/* Toolbar */}
               <div className="flex items-center justify-between mb-8 pb-4 border-b border-blush/40">
                 <p className="label text-espresso/40 text-[10px]">{filtered.length} STYLES</p>
                 <div className="flex items-center gap-6">
-                  {/* Mobile filter */}
                   <button
                     onClick={() => setFilterOpen(true)}
                     className="lg:hidden label text-[10px] text-espresso flex items-center gap-2"
@@ -154,7 +143,6 @@ export default function ShopPage() {
           </div>
         </div>
 
-        {/* Mobile filter drawer */}
         <AnimatePresence>
           {filterOpen && (
             <>
@@ -166,7 +154,7 @@ export default function ShopPage() {
                 onClick={() => setFilterOpen(false)}
               />
               <motion.div
-                className="fixed bottom-0 left-0 right-0 bg-ivory z-[201] rounded-t-none p-8 lg:hidden"
+                className="fixed bottom-0 left-0 right-0 bg-ivory z-[201] p-8 lg:hidden"
                 initial={{ y: '100%' }}
                 animate={{ y: 0 }}
                 exit={{ y: '100%' }}
@@ -184,5 +172,17 @@ export default function ShopPage() {
       </div>
       <Footer />
     </>
+  );
+}
+
+export default function ShopPage() {
+  return (
+    <Suspense fallback={
+      <div className="pt-20 min-h-screen flex items-center justify-center">
+        <p className="label text-espresso/30 text-[10px]">LOADING...</p>
+      </div>
+    }>
+      <ShopContent />
+    </Suspense>
   );
 }
