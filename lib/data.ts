@@ -5,8 +5,8 @@ export const CATEGORIES: Category[] = [
   { id: 2, name: 'Kanchipuram', slug: 'kanchipuram', image: 'https://images.unsplash.com/photo-1583391733956-6c78276477e5?w=800&q=80&fit=crop', display_order: 2, active: true },
   { id: 3, name: 'Cotton Sarees', slug: 'cotton', image: 'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=800&q=80&fit=crop', display_order: 3, active: true },
   { id: 4, name: 'Designer', slug: 'designer', image: 'https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?w=800&q=80&fit=crop', display_order: 4, active: true },
-  { id: 5, name: 'Bridal', slug: 'bridal', image: 'https://images.unsplash.com/photo-1504703395950-b89145a5425b?w=800&q=80&fit=crop', display_order: 5, active: true },
-  { id: 6, name: 'Party Wear', slug: 'party-wear', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&fit=crop', display_order: 6, active: true },
+  { id: 5, name: 'Bridal', slug: 'bridal', image: 'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=800&q=80&fit=crop', display_order: 5, active: true },
+  { id: 6, name: 'Party Wear', slug: 'party-wear', image: 'https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?w=800&q=80&fit=crop', display_order: 6, active: true },
 ];
 
 export const PRODUCTS: Product[] = [
@@ -64,8 +64,8 @@ export const PRODUCTS: Product[] = [
     colors: [{ name: 'Navy', hex: '#1B2A4A' }, { name: 'Silver', hex: '#C0C0C0' }],
     stock: 8,
     images: [
-      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=85&fit=crop',
-      'https://images.unsplash.com/photo-1504703395950-b89145a5425b?w=1200&q=85&fit=crop',
+      'https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?w=1200&q=85&fit=crop',
+      'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=1200&q=85&fit=crop',
     ],
     featured: true,
     new_arrival: true,
@@ -85,8 +85,8 @@ export const PRODUCTS: Product[] = [
     colors: [{ name: 'Blush', hex: '#D8B8B0' }, { name: 'Ivory', hex: '#F7F2EA' }],
     stock: 12,
     images: [
-      'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1200&q=85&fit=crop',
-      'https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1200&q=85&fit=crop',
+      'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=1200&q=85&fit=crop',
+      'https://images.unsplash.com/photo-1583391733956-6c78276477e5?w=1200&q=85&fit=crop',
     ],
     featured: false,
     new_arrival: true,
@@ -105,7 +105,7 @@ export const PRODUCTS: Product[] = [
     colors: [{ name: 'Crimson', hex: '#DC143C' }, { name: 'Gold', hex: '#A88955' }, { name: 'Ivory', hex: '#F7F2EA' }],
     stock: 2,
     images: [
-      'https://images.unsplash.com/photo-1504703395950-b89145a5425b?w=1200&q=85&fit=crop',
+      'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=1200&q=85&fit=crop',
       'https://images.unsplash.com/photo-1583391733956-6c78276477e5?w=1200&q=85&fit=crop',
     ],
     featured: true,
@@ -145,8 +145,8 @@ export const PRODUCTS: Product[] = [
     colors: [{ name: 'Gold', hex: '#A88955' }, { name: 'Champagne', hex: '#F7E7CE' }],
     stock: 7,
     images: [
-      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=85&fit=crop',
-      'https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1200&q=85&fit=crop',
+      'https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?w=1200&q=85&fit=crop',
+      'https://images.unsplash.com/photo-1583391733956-6c78276477e5?w=1200&q=85&fit=crop',
     ],
     featured: true,
     new_arrival: true,
@@ -205,8 +205,8 @@ export const PRODUCTS: Product[] = [
     colors: [{ name: 'Dusty Rose', hex: '#DCAE96' }, { name: 'Nude', hex: '#E8CABA' }],
     stock: 9,
     images: [
-      'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1200&q=85&fit=crop',
-      'https://images.unsplash.com/photo-1504703395950-b89145a5425b?w=1200&q=85&fit=crop',
+      'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=1200&q=85&fit=crop',
+      'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=1200&q=85&fit=crop',
     ],
     featured: false,
     new_arrival: true,
@@ -225,7 +225,7 @@ export const PRODUCTS: Product[] = [
     colors: [{ name: 'Cobalt', hex: '#0047AB' }, { name: 'White', hex: '#FFFFFF' }],
     stock: 6,
     images: [
-      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=85&fit=crop',
+      'https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?w=1200&q=85&fit=crop',
       'https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?w=1200&q=85&fit=crop',
     ],
     featured: false,
@@ -246,8 +246,8 @@ export const PRODUCTS: Product[] = [
     colors: [{ name: 'Champagne', hex: '#F7E7CE' }, { name: 'Gold', hex: '#A88955' }],
     stock: 11,
     images: [
-      'https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1200&q=85&fit=crop',
-      'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1200&q=85&fit=crop',
+      'https://images.unsplash.com/photo-1583391733956-6c78276477e5?w=1200&q=85&fit=crop',
+      'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=1200&q=85&fit=crop',
     ],
     featured: false,
     new_arrival: true,
@@ -306,7 +306,7 @@ export const PRODUCTS: Product[] = [
     colors: [{ name: 'Vermilion', hex: '#E34234' }, { name: 'Gold', hex: '#A88955' }],
     stock: 1,
     images: [
-      'https://images.unsplash.com/photo-1504703395950-b89145a5425b?w=1200&q=85&fit=crop',
+      'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=1200&q=85&fit=crop',
       'https://images.unsplash.com/photo-1583391733956-6c78276477e5?w=1200&q=85&fit=crop',
     ],
     featured: true,
@@ -326,7 +326,7 @@ export const PRODUCTS: Product[] = [
     colors: [{ name: 'Teal', hex: '#008080' }, { name: 'Gold', hex: '#A88955' }],
     stock: 5,
     images: [
-      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=85&fit=crop',
+      'https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?w=1200&q=85&fit=crop',
       'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=1200&q=85&fit=crop',
     ],
     featured: false,
@@ -346,8 +346,8 @@ export const PRODUCTS: Product[] = [
     colors: [{ name: 'Lavender', hex: '#E6E6FA' }, { name: 'Silver', hex: '#C0C0C0' }],
     stock: 10,
     images: [
-      'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1200&q=85&fit=crop',
-      'https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1200&q=85&fit=crop',
+      'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=1200&q=85&fit=crop',
+      'https://images.unsplash.com/photo-1583391733956-6c78276477e5?w=1200&q=85&fit=crop',
     ],
     featured: false,
     new_arrival: true,
@@ -367,7 +367,7 @@ export const PRODUCTS: Product[] = [
     stock: 2,
     images: [
       'https://images.unsplash.com/photo-1583391733956-6c78276477e5?w=1200&q=85&fit=crop',
-      'https://images.unsplash.com/photo-1504703395950-b89145a5425b?w=1200&q=85&fit=crop',
+      'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=1200&q=85&fit=crop',
     ],
     featured: false,
     new_arrival: false,
@@ -386,8 +386,8 @@ export const PRODUCTS: Product[] = [
     colors: [{ name: 'Black', hex: '#0D0D0D' }, { name: 'Silver', hex: '#C0C0C0' }],
     stock: 6,
     images: [
-      'https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1200&q=85&fit=crop',
-      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=85&fit=crop',
+      'https://images.unsplash.com/photo-1583391733956-6c78276477e5?w=1200&q=85&fit=crop',
+      'https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?w=1200&q=85&fit=crop',
     ],
     featured: false,
     new_arrival: true,
