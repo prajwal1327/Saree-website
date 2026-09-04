@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, use } from 'react';
 import { notFound } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { getProductBySlug, PRODUCTS, formatPrice } from '@/lib/data';
@@ -8,11 +8,12 @@ import ProductCard from '@/components/ProductCard';
 import Footer from '@/components/Footer';
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export default function ProductPage({ params }: Props) {
-  const product = getProductBySlug(params.slug);
+  const resolvedParams = use(params);
+  const product = getProductBySlug(resolvedParams.slug);
   if (!product) notFound();
 
   const [activeImg, setActiveImg] = useState(0);
