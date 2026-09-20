@@ -21,62 +21,6 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
   if (path === '/admin/login') return <>{children}</>;
 
-  const SidebarContent = ({ showLabels }: { showLabels: boolean }) => (
-    <>
-      <div className={`px-4 py-5 border-b border-ivory/10 flex items-center ${showLabels ? 'justify-between' : 'justify-center'}`}>
-        {showLabels && (
-          <span style={{ fontFamily: 'Cormorant Garamond, serif', letterSpacing: '0.2em' }} className="text-xl font-light text-ivory">
-            SĀRI
-          </span>
-        )}
-        <button
-          onClick={() => {
-            if (mobileOpen) setMobileOpen(false);
-            else setDesktopCollapsed(!desktopCollapsed);
-          }}
-          className="text-ivory/40 hover:text-ivory text-xs p-1 hidden lg:block"
-          aria-label="Toggle sidebar"
-        >
-          {desktopCollapsed ? '▶' : '◀'}
-        </button>
-        <button
-          onClick={() => setMobileOpen(false)}
-          className="text-ivory/40 hover:text-ivory text-lg p-1 lg:hidden"
-          aria-label="Close menu"
-        >
-          ×
-        </button>
-      </div>
-
-      <nav className="flex-1 py-4 px-2 space-y-1 overflow-y-auto">
-        {navItems.map((item) => {
-          const active = path === item.href;
-          return (
-            <Link
-              key={item.href}
-              href={item.href}
-              onClick={() => setMobileOpen(false)}
-              className={`flex items-center gap-3 px-3 py-3 lg:py-2.5 transition-colors ${active ? 'bg-ivory/10 text-ivory' : 'text-ivory/40 hover:text-ivory hover:bg-ivory/5'}`}
-            >
-              <span className="text-sm flex-shrink-0 w-5 text-center">{item.icon}</span>
-              {showLabels && <span className="text-xs tracking-wide">{item.label}</span>}
-            </Link>
-          );
-        })}
-      </nav>
-
-      <div className="px-4 py-4 border-t border-ivory/10">
-        <Link
-          href="/"
-          className={`flex items-center gap-3 text-ivory/30 hover:text-ivory/60 transition-colors text-xs`}
-        >
-          <span className="w-5 text-center flex-shrink-0">↗</span>
-          {showLabels && <span>View Site</span>}
-        </Link>
-      </div>
-    </>
-  );
-
   return (
     <div className="min-h-screen bg-[#F9F7F4] flex" style={{ fontFamily: 'Inter, sans-serif' }}>
 
