@@ -70,14 +70,20 @@ export default function MobileMenu({ isOpen, onClose }: Props) {
             ))}
 
             <div className="space-y-5 mt-4">
-              {['NEW ARRIVALS', 'ABOUT', 'CONTACT'].map((item) => (
+              {[
+                { label: 'NEW ARRIVALS', href: '/shop?filter=new' },
+                { label: 'ABOUT', href: '/about' },
+                { label: 'CONTACT', href: '/contact' },
+                { label: 'TRACK ORDER', href: '/track' },
+                { label: 'FAQ', href: '/faq' },
+              ].map((item) => (
                 <Link
-                  key={item}
-                  href={`/${item.toLowerCase().replace(' ', '-')}`}
+                  key={item.label}
+                  href={item.href}
                   onClick={onClose}
                   className="block label text-espresso hover:text-burgundy transition-colors"
                 >
-                  {item}
+                  {item.label}
                 </Link>
               ))}
             </div>
